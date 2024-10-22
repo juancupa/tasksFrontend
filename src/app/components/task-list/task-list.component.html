@@ -1,0 +1,26 @@
+<br class="container">
+
+
+<a class="btn btn-primary" routerLink="/task/addTask"> Create Task</a>
+&nbsp;&nbsp;
+
+<h2>List Tasks</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>title</th>
+            <th>description</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody *ngFor=" let t of tasks ">
+        <tr>
+            <td>{{t.title}}</td>
+            <td>{{t.description}}</td>
+            <td><button class="btn btn-danger" (click)="deleteTaskById(t.id)">Eliminar</button></td>
+        </tr>
+    </tbody>
+
+     </table>
+
+
